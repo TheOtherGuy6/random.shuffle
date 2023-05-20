@@ -54,14 +54,14 @@ To play the next song, simply wait for the current song to finish playing. The s
 Supported Audio Formats
 The script supports the following audio formats:
 
-WAV (.wav)
+*WAV (.wav)
 Windows Media Audio (.wma)
 Free Lossless Audio Codec (.flac)
 MP3 (.mp3)
 Note
 Make sure your music files are stored in the specified music folder or its subfolders.
 The script shuffles the order in which the songs are played to provide variety.
-The script keeps track of the number of times each song is played and the total song count.
+The script keeps track of the number of times each song is played and the total song count.*
 Copyright information is displayed after each song is played.
 The script records the start time and displays the elapsed time for each song.
 This script assumes that the necessary dependencies (pydub) are installed and available in the Python environment.
