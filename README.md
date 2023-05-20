@@ -50,7 +50,7 @@ This will automatically execute the script using the default Python interpreter 
 Controls
 To play the next song, simply wait for the current song to finish playing. The script will automatically proceed to the next song in the shuffled order.
 <pre>To skip the current song, press Ctrl+C (SIGINT) in the terminal. The script will skip the current song and move to the next one.</pre>
-To stop the script, press Ctrl+C twice in quick succession. The script will exit gracefully, and the shell will be closed.
+**To stop the script, press Ctrl+C twice in quick succession. The script will exit gracefully, and the shell will be closed.**
 Supported Audio Formats
 The script supports the following audio formats:
 
