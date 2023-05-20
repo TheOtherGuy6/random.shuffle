@@ -26,11 +26,15 @@ Press the Windows key on your keyboard.
 Type "Command Prompt" in the search bar.
 Right-click on "Command Prompt" and select "Run as administrator."
 
+<pre>
 Type the following command and press Enter: cd %USERPROFILE%\Desktop
+</pre>
 
 Execute the script using the Python interpreter:
 
+<pre>
 Type the following command and press Enter: python "random.shuffle(V2).py"
+</pre>
 
 The script will start running and display the output in the Command Prompt window.
 
