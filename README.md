@@ -11,8 +11,9 @@ pip install pydub
 
 Modify the script to specify the path to your music folder:
 
+<pre>
 music_folder = r"D:\Music"  # Replace with the path to your music folder
-
+</pre>
 
 
 
