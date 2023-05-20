@@ -6,9 +6,7 @@ Make sure you have Python installed on your system (version 3.6 or higher).
 Install the required dependencies by running the following command:
 
 <pre>
-```bash
 pip install pydub
-```
 </pre>
 
 Modify the script to specify the path to your music folder:
