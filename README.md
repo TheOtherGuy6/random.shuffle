@@ -19,7 +19,7 @@ music_folder = r"D:\Music"  # Replace with the path to your music folder
 
 To run the script, follow these steps:
 
-Save the script as "random.shuffle(V2).py" on your desktop.
+**Save the script as "random.shuffle(V2).py" on your desktop.**
 
 Open the Command Prompt as an administrator:
 Press the Windows key on your keyboard.
