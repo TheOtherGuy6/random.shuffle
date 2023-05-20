@@ -32,7 +32,7 @@ Type the following command and press Enter: python "random.shuffle(V2).py"
 
 The script will start running and display the output in the Command Prompt window.
 
-Alternatively, you can simply double-click the "random.shuffle.py" file on your desktop. 
+Alternatively, you can simply double-click the "random.shuffle(V2).py" file on your desktop. 
 This will automatically execute the script using the default Python interpreter on your system, and the output will be displayed in the Command Prompt window that opens.
 
 
