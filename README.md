@@ -1,4 +1,3 @@
-Music Player Script
 This Python script allows you to play music files from a specified folder in a shuffled order. It utilizes the pydub library for audio playback and supports various audio formats such as WAV, WMA, FLAC, and MP3.
 
 Usage
