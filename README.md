@@ -87,7 +87,7 @@ The script performs the following steps:
 
 ## Keyboard Interrupt (Ctrl+C)
 
-If you want to stop the music player before it finishes playing all the songs, you can press Ctrl+C in the command prompt or terminal where the script is running. The program will print a closing message and exit gracefully.
+If you want to stop the music player before it finishes playing all the songs, you can double press Ctrl+C in the command prompt or terminal where the script is running. The program will print a closing message and exit gracefully.
 
 ## License
 
