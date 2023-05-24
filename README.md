@@ -63,7 +63,7 @@
     <h2>Functionality</h2>
 
     <ol>
-        <li>It imports necessary libraries and modules including <code>os</code>, <code>random</code>, <code>datetime</code>, <code>pygame</code>, and <code>signal</code>.</li>
+        <li>It imports necessary libraries and modules including <code class="highlight">os</code>, <code class="highlight">random</code>, <code class="highlight">datetime</code>, <code class="highlight">pygame</code>, and <code class="highlight">signal</code>.</li>
         <li>The script defines two ANSI escape codes, <code class="highlight">BOLD</code> and <code class="highlight">RESET</code>, for formatting text.</li>
         <li>It initializes the <code class="highlight">music_folder</code> variable to the path of the music folder. Modify this variable to point to your music folder.</li>
         <li>The script searches for music files (with extensions .wav, .wma, .flac, .mp3) in the specified <code class="highlight">music_folder</code> and stores them in a list called <code class="highlight">music_files</code>. It stores both the folder path and filename for each music file.</li>
