@@ -1,8 +1,7 @@
 import os
 import random
 import datetime
-from pydub import AudioSegment
-from pydub.playback import play
+import pygame
 import signal
 
 # ANSI escape code for bold text
@@ -10,7 +9,7 @@ BOLD = "\033[1m"
 # ANSI escape code to reset text formatting
 RESET = "\033[0m"
 
-music_folder = r"D:\Music"  # Replace with the path to your music folder
+music_folder = r"E:\Music"  # Replace with the path to your music folder
 music_files = []
 for dirpath, dirnames, filenames in os.walk(music_folder):
     for filename in filenames:
@@ -25,27 +24,27 @@ skip_counter = 0  # Initialize the song skip counter
 
 start_time = datetime.datetime.now()  # Record the start time
 
-
 def skip_song(signal, frame):
     global skip_counter
     skip_counter += 1
     raise Exception("Skip")
 
-
 signal.signal(signal.SIGINT, skip_song)
 
-
 try:
+    pygame.mixer.init()
+
     for folder, filename in music_files:
         file_path = os.path.join(folder, filename)
+
         if filename.endswith(".mp3"):
-            song = AudioSegment.from_mp3(file_path)
+            pygame.mixer.music.load(file_path)
         elif filename.endswith(".flac"):
-            song = AudioSegment.from_file(file_path, format="flac")
+            pygame.mixer.music.load(file_path)
         elif filename.endswith(".wav"):
-            song = AudioSegment.from_wav(file_path)
+            pygame.mixer.music.load(file_path)
         elif filename.endswith(".wma"):
-            song = AudioSegment.from_file(file_path, format="wma")
+            pygame.mixer.music.load(file_path)
 
         if filename not in repeat_song_counter:
             repeat_song_counter[filename] = 1
@@ -72,7 +71,12 @@ try:
         print("Repeat song counter:", repeat_song_counter[filename])  # Print the repeat song counter for the current song
 
         try:
-            play(song)
+            pygame.mixer.music.play()
+
+            # Wait until the song finishes playing
+            while pygame.mixer.music.get_busy():
+                pass
+
         except Exception as e:
             if str(e) == "Skip":
                 print("\nSkipped the current song.")
