@@ -1,73 +1,107 @@
-This Python script allows you to play music files from a specified folder in a shuffled order. It utilizes the pydub library for audio playback and supports various audio formats such as **WAV, WMA, FLAC, and MP3.**
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
 
-Usage
-Make sure you have Python installed on your system (version 3.6 or higher).
+        h1 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-Install the required dependencies by running the following command:
+        code {
+            font-family: Consolas, monospace;
+            background-color: #f2f2f2;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
 
-<pre>
-pip install pydub
-</pre>
+        .highlight {
+            background-color: #ffffcc;
+        }
 
-Modify the script to specify the path to your music folder:
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Shuffle Music Player</h1>
 
-<pre>
-music_folder = r"D:\Music"  # Replace with the path to your music folder
-</pre>
+    <p>This script is a random shuffle music player that plays music files from a specified folder in a random order. It uses the Pygame library to play the music and provides some additional information while playing each song.</p>
 
+    <h2>Installation</h2>
 
+    <p>To use this script, you need to have Python installed on your system. You can download Python from the official website: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></p>
 
-To run the script, follow these steps:
+    <p>This script requires the Pygame library. You can install Pygame using pip, which is a package installer for Python. Open a command prompt or terminal and run the following command:</p>
 
-**Save the script as "random.shuffle(V2).py" on your desktop.**
+    <pre><code>pip install pygame</code></pre>
 
-Open the Command Prompt as an administrator:
-Press the Windows key on your keyboard.
-Type "Command Prompt" in the search bar.
-Right-click on "Command Prompt" and select "Run as administrator."
+    <h2>Usage</h2>
 
-<pre>
-Type the following command and press Enter: cd %USERPROFILE%\Desktop
-</pre>
+    <ol>
+        <li>Clone or download the script from the GitHub repository.</li>
+        <li>Move the script to your desktop.</li>
+        <li>Open a command prompt or terminal.</li>
+        <li>Change the current directory to your desktop by running the following command:</li>
+    </ol>
 
-Execute the script using the Python interpreter:
+    <pre><code>cd %USERPROFILE%\Desktop</code></pre>
 
-<pre>
-Type the following command and press Enter: python "random.shuffle(V2).py"
-</pre>
+    <ol start="5">
+        <li>Run the script using the following command:</li>
+    </ol>
 
-The script will start running and display the output in the Command Prompt window.
+    <pre><code>python "random.shuffle(V3).py"</code></pre>
 
-Alternatively, you can simply double-click the "random.shuffle(V2).py" file on your desktop. 
-This will automatically execute the script using the default Python interpreter on your system, and the output will be displayed in the Command Prompt window that opens.
+    <p>The music player will start playing random songs from the specified music folder.</p>
 
+    <h2>Functionality</h2>
 
+    <ol>
+        <li>It imports necessary libraries and modules including <code>os</code>, <code>random</code>, <code>datetime</code>, <code>pygame</code>, and <code>signal</code>.</li>
+        <li>The script defines two ANSI escape codes, <code class="highlight">BOLD</code> and <code class="highlight">RESET</code>, for formatting text.</li>
+        <li>It initializes the <code class="highlight">music_folder</code> variable to the path of the music folder. Modify this variable to point to your music folder.</li>
+        <li>The script searches for music files (with extensions .wav, .wma, .flac, .mp3) in the specified <code class="highlight">music_folder</code> and stores them in a list called <code class="highlight">music_files</code>. It stores both the folder path and filename for each music file.</li>
+        <li>The list of music files is shuffled randomly using the <code class="highlight">random.shuffle()</code> function.</li>
+        <li>It initializes variables <code class="highlight">song_count</code> (to keep track of the number of songs played), <code class="highlight">repeat_song_counter</code> (to count the number of times each song is repeated), <code class="highlight">skip_counter</code> (to count the number of song skips), and <code class="highlight">start_time</code> (to record the start time of the program).</li>
+        <li>The script defines a signal handler function <code class="highlight">skip_song()</code> to handle the interruption signal (Ctrl+C) and increment the <code class="highlight">skip_counter</code> variable.</li>
+        <li>It registers the <code class="highlight">skip_song()</code> function as the signal handler for the interruption signal (Ctrl+C).</li>
+        <li>Inside a try-except block, the script initializes the Pygame mixer.</li>
+        <li>It iterates through each music file in the shuffled <code class="highlight">music_files</code> list.</li>
+        <li>For each file, it loads the file into the Pygame mixer based on its extension.</li>
+        <li>The script increments the <code class="highlight">song_count</code> variable and updates the <code class="highlight">repeat_song_counter</code> for the current song.</li>
+        <li>It calculates the current time, elapsed time, and formatted date.</li>
+        <li>The script prints the following information for the current song:</li>
+    </ol>
 
+    <pre><code>
+Now playing: <span class="bold">parent_folder - folder_name - filename</span>
+Song count: <span class="bold">song_count</span>
+Current time: <span class="bold">formatted_current_time</span>
+Date: <span class="bold">formatted_date</span>
+Elapsed time: <span class="bold">formatted_elapsed_time</span>
+Repeat song counter: <span class="bold">repeat_song_counter[filename]</span>
+    </code></pre>
 
+    <ol start="15">
+        <li>Inside a nested try-except block, the script plays the loaded music using the Pygame mixer and waits until the song finishes playing.</li>
+        <li>If an exception is raised (indicating a skip signal from the signal handler), the script prints a message indicating the song skip and the current <code class="highlight">skip_counter</code> value.</li>
+        <li>After each song is played, the script prints the copyright information and a message indicating shuffling of music.</li>
+        <li>If the program is interrupted by the user (Ctrl+C), the script handles the <code class="highlight">KeyboardInterrupt</code> exception and prints a message indicating the interruption.</li>
+        <li>Finally, the script prints a closing message and the copyright information.</li>
+    </ol>
 
+    <h2>Keyboard Interrupt (Ctrl+C)</h2>
 
+    <p>If you want to stop the music player before it finishes playing all the songs, you can press Ctrl+C in the command prompt or terminal where the script is running. The program will print a closing message and exit gracefully.</p>
 
-Controls
-To play the next song, simply wait for the current song to finish playing. The script will automatically proceed to the next song in the shuffled order.
-<pre>To skip the current song, press Ctrl+C (SIGINT) in the terminal. The script will skip the current song and move to the next one.</pre>
-**To stop the script, press Ctrl+C twice in quick succession. The script will exit gracefully, and the shell will be closed.**
-Supported Audio Formats
-The script supports the following audio formats:
+    <h2>License</h2>
 
-*WAV (.wav)
-Windows Media Audio (.wma)
-Free Lossless Audio Codec (.flac)
-MP3 (.mp3)
-Note
-Make sure your music files are stored in the specified music folder or its subfolders.
-The script shuffles the order in which the songs are played to provide variety.
-The script keeps track of the number of times each song is played and the total song count.*
-Copyright information is displayed after each song is played.
-The script records the start time and displays the elapsed time for each song.
-This script assumes that the necessary dependencies (pydub) are installed and available in the Python environment.
-License
-This script is provided under the MIT License. Feel free to modify and use it according to your needs.
-
-Author
-This script was created by Wayne TheOtherGuy.
-
+    <p>This script is created by Wayne Fry and all rights are reserved.</p>
+</body>
+</html>
