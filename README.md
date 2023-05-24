@@ -1,32 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-        }
-
-        h1 {
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        code {
-            font-family: Consolas, monospace;
-            background-color: #f2f2f2;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-
-        .highlight {
-            background-color: #ffffcc;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
     <h1>Random Shuffle Music Player</h1>
