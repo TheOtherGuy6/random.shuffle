@@ -1,31 +1,4 @@
-## Prerequisites
-
-Before running the script, ensure that you have Python installed on your system. If Python is not installed, you can download and install it from the official Python website: [https://www.python.org](https://www.python.org).
-
-## Usage
-
-To run the script, follow these steps:
-
-1. Open Command Prompt as an administrator.
-2. Navigate to your Desktop directory using the command:
-
-<pre>cd %USERPROFILE%\Desktop</pre>
-
-3. Execute the script using Python:
-
-<pre>python "random.shuffle(V4).py"</pre>
-
-The script requires two external modules: **pygame** and **mutagen**. If you haven't installed these modules, you can install them using the following commands in the Command Prompt:
-
-<pre>pip install pygame</pre>
-<pre>pip install mutagen</pre>
-
-
-## Configuration
-
-Once the script is executed, it will shuffle the music files present in the specified folder (`music_folder`). The script assumes that the music folder is located at 'E:\Music'. Modify the `music_folder` variable in the script if your music folder is located elsewhere.
-
-# Music Shuffling and Playing Script
+## Music Shuffling and Playing Script
 
 The script is designed to shuffle and play music files from a specified folder. It supports various audio formats, including WAV, WMA, FLAC, and MP3.
 
