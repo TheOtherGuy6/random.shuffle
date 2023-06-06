@@ -13,7 +13,7 @@ To run the script, follow these steps:
 1. Open Command Prompt as an administrator.
 2. Navigate to your Desktop directory using the command:
 
-**cd %USERPROFILE%\Desktop**
+<pre>cd %USERPROFILE%\Desktop</pre>
 
 3. Execute the script using Python:
 
@@ -21,8 +21,8 @@ To run the script, follow these steps:
 
 The script requires two external modules: **pygame** and **mutagen**. If you haven't installed these modules, you can install them using the following commands in the Command Prompt:
 
-**pip install pygame**
-**pip install mutagen**
+<pre>pip install pygame</pre>
+<pre>pip install mutagen</pre>
 
 
 ## Configuration
