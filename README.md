@@ -16,8 +16,8 @@ To run the script, follow these steps:
 **cd %USERPROFILE%\Desktop**
 
 3. Execute the script using Python:
-4. 
-**python "random.shuffle(V4).py"**
+
+<pre>python "random.shuffle(V4).py"</pre>
 
 The script requires two external modules: **pygame** and **mutagen**. If you haven't installed these modules, you can install them using the following commands in the Command Prompt:
 
