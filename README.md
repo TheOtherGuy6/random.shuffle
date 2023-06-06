@@ -1,94 +1,32 @@
-# Random Shuffle Music Player
+The script is designed to shuffle and play music files from a specified folder. It supports various audio formats, including WAV, WMA, FLAC, and MP3.
 
-This script is a random shuffle music player that plays music files from a specified folder in a random order. It uses the Pygame library to play the music and provides some additional information while playing each song.
+Before running the script, ensure that you have Python installed on your system. If Python is not installed, you can download and install it from the official Python website (https://www.python.org).
 
-## Installation
+To run the script, follow these steps:
 
-To use this script, you need to have Python installed on your system. You can download Python from the official website: https://www.python.org/downloads/
+Open Command Prompt as an administrator.
+Navigate to your Desktop directory using the command: cd %USERPROFILE%\Desktop.
+Execute the script using Python: python "random.shuffle(V4).py".
+The script requires two external modules: pygame and mutagen. If you haven't installed these modules, you can install them using the following commands in the Command Prompt:
 
-This script requires the Pygame library. You can install Pygame using pip, which is a package installer for Python. Open a command prompt or terminal and run the following command:
-
-```
+Copy code
 pip install pygame
-```
+pip install mutagen
+Once the script is executed, it will shuffle the music files present in the specified folder (music_folder). The script assumes that the music folder is located at 'E:\Music'. Modify the music_folder variable if your music folder is located elsewhere.
 
-## Usage
+The script uses the random.shuffle() function to randomize the order of the music files.
 
-1. Clone or download the script from the GitHub repository.
+The script keeps track of the following information during playback:
 
-2. Move the script to your desktop.
+Song Count: The number of songs played.
+Current Time: The current time when each song starts playing.
+Date: The date in the format "Day, MM/DD/YYYY".
+Elapsed Time: The time elapsed since the script started running.
+Repeat Song Counter: The number of times each song has been repeated.
+The script uses the pygame module to play the music files. It initializes the mixer using pygame.mixer.init() and loads each music file using pygame.mixer.music.load(). It then plays the loaded music file using pygame.mixer.music.play().
 
-3. Open a command prompt or terminal.
+If a song exceeds 8 minutes (480 seconds), it is skipped, and the script moves on to the next song.
 
-4. Change the current directory to your desktop by running the following command:
+The script handles the interruption signal (Ctrl+C) using the signal module. When interrupted, it prints the copyright information.
 
-```
-cd %USERPROFILE%\Desktop
-```
-
-5. Run the script using the following command:
-
-```
-python "random.shuffle(V3).py"
-```
-
-6. The music player will start playing random songs from the specified music folder.
-
-## Functionality
-
-The script performs the following steps:
-
-1. It imports necessary libraries and modules including `os`, `random`, `datetime`, `pygame`, and `signal`.
-
-2. The script defines two ANSI escape codes, `BOLD` and `RESET`, for formatting text.
-
-3. It initializes the `music_folder` variable to the path of the music folder. Modify this variable to point to your music folder.
-
-4. The script searches for music files (with extensions .wav, .wma, .flac, .mp3) in the specified `music_folder` and stores them in a list called `music_files`. It stores both the folder path and filename for each music file.
-
-5. The list of music files is shuffled randomly using the `random.shuffle()` function.
-
-6. It initializes variables `song_count` (to keep track of the number of songs played), `repeat_song_counter` (to count the number of times each song is repeated), `skip_counter` (to count the number of song skips), and `start_time` (to record the start time of the program).
-
-7. The script defines a signal handler function `skip_song()` to handle the interruption signal (Ctrl+C) and increment the `skip_counter` variable.
-
-8. It registers the `skip_song()` function as the signal handler for the interruption signal (Ctrl+C).
-
-9. Inside a try-except block, the script initializes the Pygame mixer.
-
-10. It iterates through each music file in the shuffled `music_files` list.
-
-11. For each file, it loads the file into the Pygame mixer based on its extension.
-
-12. The script increments the `song_count` variable and updates the `repeat_song_counter` for the current song.
-
-13. It calculates the current time, elapsed time, and formatted date.
-
-14. The script prints the following information for the current song:
-
-    - Parent folder, folder name, and filename.
-    - Song count.
-    - Current time.
-    - Date.
-    - Elapsed time.
-    - Repeat song counter for the current song.
-
-15. Inside a nested try-except block, the script plays the loaded music using the Pygame mixer and waits until the song finishes playing.
-
-16. If an exception is raised (indicating a skip signal from the signal handler), the script prints a message indicating the song skip and the current `skip_counter` value.
-
-17. After each song is played, the script prints the copyright information and a message indicating shuffling of music.
-
-18. If the program is interrupted by the user (Ctrl+C), the script handles the `KeyboardInterrupt` exception and prints a message indicating the
-
- interruption.
-
-19. Finally, the script prints a closing message and the copyright information.
-
-## Keyboard Interrupt (Ctrl+C)
-
-If you want to skip the song press Ctrl+C in the command prompt or terminal where the script is running.
-
-## License
-
-This script is created by Wayne Fry and all rights are reserved.
+The script also includes a license agreement at the beginning. By using this script, you agree to the terms and conditions mentioned in the license.
