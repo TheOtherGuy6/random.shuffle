@@ -1,7 +1,3 @@
-# Music Shuffling and Playing Script
-
-The script is designed to shuffle and play music files from a specified folder. It supports various audio formats, including WAV, WMA, FLAC, and MP3.
-
 ## Prerequisites
 
 Before running the script, ensure that you have Python installed on your system. If Python is not installed, you can download and install it from the official Python website: [https://www.python.org](https://www.python.org).
