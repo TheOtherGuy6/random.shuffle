@@ -87,8 +87,3 @@ The script handles the interruption signal (Ctrl+C) using the **signal** module.
 ## License
 
 The script is provided for educational and informational purposes only. You may modify and distribute this script for personal use or within your organization. However, you may not use this script for any commercial purposes without explicit permission from the author and copyright holder. The author and copyright holder are not responsible for any damages or liabilities arising from the use of this script. The script is provided as-is, without any warranty or guarantee of any kind.
-
-
-## License
-
-The script is provided for educational and informational purposes only. You may modify and distribute this script for personal use or within your organization. However, you may not use this script for any commercial purposes without explicit permission from the author and copyright holder. The author and copyright holder are not responsible for any damages or liabilities arising from the use of this script. The script is provided as-is, without any warranty or guarantee of any kind.
