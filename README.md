@@ -13,15 +13,16 @@ To run the script, follow these steps:
 1. Open Command Prompt as an administrator.
 2. Navigate to your Desktop directory using the command:
 
-cd %USERPROFILE%\Desktop
+**cd %USERPROFILE%\Desktop**
 
 3. Execute the script using Python:
-python "random.shuffle(V4).py"
+4. 
+**python "random.shuffle(V4).py"**
 
 The script requires two external modules: **pygame** and **mutagen**. If you haven't installed these modules, you can install them using the following commands in the Command Prompt:
 
-pip install pygame
-pip install mutagen
+**pip install pygame**
+**pip install mutagen**
 
 
 ## Configuration
