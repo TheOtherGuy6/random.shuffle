@@ -1,5 +1,5 @@
 <pre>Update:
-Made some Small changes added meta data if your track has been tagged correct it should print</pre>
+Made some small changes added meta data if your track has been tagged correct it should print</pre>
 
 ## Music Shuffling and Playing Script
 
