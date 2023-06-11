@@ -14,14 +14,11 @@ To run the script:
 2. Navigate to your Desktop directory:
    cd %USERPROFILE%\Desktop
 3. Execute the script using Python:
-   python "random.shuffle(V4).py"
+   python "random.shuffle(V5).py"
 
 Make sure you have the following modules installed (use 'pip install [module_name]'):
 - pygame
 - mutagen
-
-Note: This script assumes that you have a music folder located at 'E:\Music'.
-      Modify the 'music_folder' variable accordingly if your music folder is in a different location.
 """
 
 import os
@@ -99,6 +96,10 @@ try:
         parent_folder = os.path.basename(os.path.dirname(folder))
         folder_name = os.path.basename(folder)
         print("Now playing:", parent_folder, "-", folder_name, "-", filename)
+        print("Music genre:", audio.tags.get("genre"))  # Display music genre
+        print("Song metadata:")
+        print("  Artist:", audio.tags.get("artist"))  # Display artist metadata
+        print("  Title:", audio.tags.get("title"))  # Display title metadata
         print("Song count:", song_count)
         print("Current time:", formatted_current_time)
         print("Date:", formatted_date)
