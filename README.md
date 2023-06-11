@@ -1,3 +1,6 @@
+<pre>Update:
+Made some Small changes added meta data if your track has been tagged correct it should print</pre>
+
 ## Music Shuffling and Playing Script
 
 The script is designed to shuffle and play music files from a specified folder. It supports various audio formats, including WAV, WMA, FLAC, and MP3.
